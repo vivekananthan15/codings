@@ -15,3 +15,10 @@ console.log(resCoercion, typeof resCoercion);
 
 resCoercion=Number(value2)+Number(value2);
 console.log(resCoercion, typeof resCoercion);
+
+// Output
+/******************************537537537537 string
+1074537537 string
+537537 string
+1074 number
+ * ******************************/
