@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        .box{
+            float: left;
+            background-color: aquamarine;
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+            padding: 10px;
+            border:1px solid #800;
+        }
+        .image{
+            margin: 30px 50px;
+        }
+        .invisible{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drag & Drop using HTML & JS</h1>
+    <div class="box">
+        <img id="img1" class="image" src="./data-recovery.png" width="300" height="300" draggable="true"/>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script src="./drag.js"></script>
+</body>
+</html>

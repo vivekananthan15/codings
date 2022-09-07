@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="geoloc">Get Location</button>
+    <script>
+        let posLoc=document.getElementById('geoloc');
+        posLoc.addEventListener('click',event=>{
+            if('geolocation' in navigator){
+                navigator.geolocation.getCurrentPosition(pos=>{
+                    console.log("latitude",pos.coords.latitude);
+                    console.log("longitude",pos.coords.longitude);
+                    console.log("altitude",pos.coords.altitude);
+
+                },err=>{
+                    console.log('Denied by user',err.code);
+                })
+            }
+            else{
+                console.log('Geolocation n9t supported');
+            }
+
+        })
+    </script>
+</body>
+</html>

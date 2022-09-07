@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML SSE</title>
+</head>
+<body>
+    <h2>HTML Server Side Event</h2>
+    <div id="res"></div>
+    <script>
+        if(typeof(EventSource)!=='undefined'){
+            var source=new EventSource('time.php');
+            source.onmessage=function(event)
+            {
+                document.getElementById('res').innerHTML += event.data + "<br/>";
+                //console.log(event.data);
+            }
+
+        }
+        else{
+           document.getElementById('res').innerHTML="Sorry, not supported";
+           // console.log('not supported');
+        }
+    </script>
+</body>
+</html>
